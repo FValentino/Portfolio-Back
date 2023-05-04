@@ -4,8 +4,10 @@ import com.fariasvalentino.Portfolio.model.*;
 import com.fariasvalentino.Portfolio.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @CrossOrigin
@@ -14,6 +16,8 @@ public class PortfolioController {
     
     @Autowired
     private IUsuarioService usuario;
+    @Autowired
+    private IPersonaService persona;
     
     
     //Controller usuario
@@ -45,4 +49,11 @@ public class PortfolioController {
     public Usuario cerrarSesion(){
         return this.usuario.cerrarSesion();
     } 
+    
+    //Controller persona
+    @GetMapping ("/portfolio/persona")
+    @ResponseBody
+    public Persona mostrarPersona(){
+        return this.persona.mostrarPersona();
+    }
 }

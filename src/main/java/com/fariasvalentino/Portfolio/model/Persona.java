@@ -20,9 +20,8 @@ public class Persona {
     private String email;
     private String telefono;
     private String localizacion;
-    private String descripcion;
 
-    public Persona(Long id, String nombre, String apellido, String ocupacion, String email, String telefono, String localizacion, String descripcion) {
+    public Persona(Long id, String nombre, String apellido, String ocupacion, String email, String telefono, String localizacion) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -30,7 +29,6 @@ public class Persona {
         this.email = email;
         this.telefono = telefono;
         this.localizacion = localizacion;
-        this.descripcion = descripcion;
     }
 
     public Persona() {
