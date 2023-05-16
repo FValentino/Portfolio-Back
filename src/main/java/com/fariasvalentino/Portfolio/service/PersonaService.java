@@ -13,6 +13,12 @@ public class PersonaService implements IPersonaService {
     private IPersonaRepository persona;
     
     @Override
+    public Persona agregarPersona(Persona persona) {
+        this.persona.save(persona);
+        return persona;
+    }
+    
+    @Override
     public Persona mostrarPersona() {
         return this.persona.findById(1L).orElse(null);
     }

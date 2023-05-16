@@ -54,12 +54,16 @@ public class PortfolioController {
         }
     }
     
-    @PostMapping ("/portfolio/usuario/cerrar-sesion")
-    public Usuario cerrarSesion(){
-        return this.usuario.cerrarSesion();
-    } 
+    
     
     //Controller persona
+    @PostMapping ("/portfolio/persona/registrar")
+    public Persona cargarUsuario(@RequestBody Persona persona){
+        this.persona.agregarPersona(persona);
+ 
+        return persona;
+    }
+    
     @GetMapping ("/portfolio/persona")
     public Persona mostrarPersona(){
         return this.persona.mostrarPersona();
