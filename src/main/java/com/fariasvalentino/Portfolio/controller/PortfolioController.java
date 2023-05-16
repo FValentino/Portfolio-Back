@@ -117,4 +117,20 @@ public class PortfolioController {
     public List <Educacion> listarEducacion(){
         return this.educacion.listarEducacion();
     }
+    
+    @GetMapping ("portfolio/educacion/{id}")
+    @ResponseBody
+    public Educacion buscarEducacion(@PathVariable Long id){
+        return this.educacion.buscarEducacion(id);
+    }
+    
+    @DeleteMapping ("/portfolio/educacion/borrar")
+    public void borrarEducacion(@RequestParam Long id){
+        this.educacion.borrarEducacion(id);
+    }
+    
+    @PutMapping ("/portfolio/educacion/editar/{id}")
+    public Educacion editarEducacion(@PathVariable Long id, @RequestBody Educacion educacion){
+        return this.educacion.editarEducacion(id, educacion);
+    }
 }

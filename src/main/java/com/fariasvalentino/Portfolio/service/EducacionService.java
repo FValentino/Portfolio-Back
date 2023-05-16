@@ -24,5 +24,30 @@ public class EducacionService implements IEducacionService{
         return this.educacion.findAll();
     }
 
+    @Override
+    public Educacion editarEducacion(Long id, Educacion educacion) {
+        Educacion edu = this.educacion.findById(id).orElse(null);
+        
+        edu.setNombre(educacion.getNombre());
+        edu.setTitulo(educacion.getTitulo());
+        edu.setFechaInicio(educacion.getFechaInicio());
+        edu.setFechaFin(educacion.getFechaFin());
+        edu.setUrlImagen(educacion.getUrlImagen());
+        
+        this.educacion.save(edu);
+        
+        return edu;
+    }
+
+    @Override
+    public void borrarEducacion(Long id) {
+        this.educacion.deleteById(id);
+    }
+
+    @Override
+    public Educacion buscarEducacion(Long id) {
+        return this.educacion.findById(id).orElse(null);
+    }
+
     
 }
