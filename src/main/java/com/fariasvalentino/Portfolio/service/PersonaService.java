@@ -16,5 +16,23 @@ public class PersonaService implements IPersonaService {
     public Persona mostrarPersona() {
         return this.persona.findById(1L).orElse(null);
     }
+
+    @Override
+    public Persona editarPersona(Persona persona) {
+        Persona pers = this.persona.findById(1L).orElse(null);
+        
+        pers.setNombre(persona.getNombre());
+        pers.setApellido(persona.getApellido());
+        pers.setOcupacion(persona.getOcupacion());
+        pers.setEmail(persona.getEmail());
+        pers.setTelefono(persona.getTelefono());
+        pers.setLocalizacion(persona.getLocalizacion());
+        pers.setDescripcion(persona.getDescripcion());
+        pers.setUrlImagen(persona.getUrlImagen());
+        
+        this.persona.save(pers);
+        
+        return pers;
+    }
     
 }

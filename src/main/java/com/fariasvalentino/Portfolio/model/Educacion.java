@@ -19,15 +19,15 @@ public class Educacion {
     private String titulo;
     private String fechaInicio;
     private String fechaFin;
-    private String imagen;
+    private String urlImagen;
 
-    public Educacion(Long id, String titulo, String nombre, String fechaInicio, String fechaFin, String imagen) {
+    public Educacion(Long id, String titulo, String nombre, String fechaInicio, String fechaFin, String urlImagen) {
         this.id = id;
         this.nombre = nombre;
         this.titulo = titulo;
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
-        this.imagen = imagen;
+        this.urlImagen = urlImagen;
     }
     
     public Educacion(){

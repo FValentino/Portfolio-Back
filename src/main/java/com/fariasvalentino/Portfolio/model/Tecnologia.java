@@ -15,12 +15,17 @@ public class Tecnologia {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nombre;
-    private String imagen;
+    private String urlImagen;
 
-    public Tecnologia(Long id, String nombre, String imagen) {
+    public Tecnologia(Long id, String nombre, String urlImagen) {
         this.id = id;
         this.nombre = nombre;
-        this.imagen = imagen;
+        this.urlImagen = urlImagen;
+    }
+    
+    public Tecnologia(String nombre, String urlImagen) {
+        this.nombre = nombre;
+        this.urlImagen = urlImagen;
     }
 
     public Tecnologia() {

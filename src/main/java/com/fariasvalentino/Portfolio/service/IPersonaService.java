@@ -4,4 +4,6 @@ import com.fariasvalentino.Portfolio.model.Persona;
 
 public interface IPersonaService {
     public Persona mostrarPersona();
+    
+    public Persona editarPersona(Persona persona);
 }

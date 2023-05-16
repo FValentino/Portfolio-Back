@@ -17,11 +17,13 @@ public class Proyecto {
     private Long id;
     private String nombre;
     private String descripcion;
+    private String urlImagen;
 
-    public Proyecto(Long id, String nombre, String descripcion) {
+    public Proyecto(Long id, String nombre, String descripcion, String urlImagen) {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
+        this.urlImagen = urlImagen;
     }
 
     public Proyecto() {

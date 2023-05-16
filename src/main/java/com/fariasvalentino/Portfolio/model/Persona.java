@@ -18,8 +18,10 @@ public class Persona {
     private String telefono;
     private String localizacion;
     private String descripcion;
+    private String urlImagen;
 
-    public Persona(Long id, String nombre, String apellido, String ocupacion, String email, String telefono, String localizacion, String descripcion) {
+    public Persona(Long id, String nombre, String apellido, String ocupacion, String email, String telefono, 
+                   String localizacion, String descripcion, String urlImagen) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -28,6 +30,7 @@ public class Persona {
         this.telefono = telefono;
         this.localizacion = localizacion;
         this.descripcion = descripcion;
+        this.urlImagen = urlImagen;
     }
 
     public Persona() {
