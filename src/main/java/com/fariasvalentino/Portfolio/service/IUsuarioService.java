@@ -10,5 +10,5 @@ public interface IUsuarioService {
     
     public boolean password(String passwordSaved, String passwordObtain);
     
-    public Usuario cerrarSesion();
+    public Usuario cerrarSesion(Usuario usuario);
 }

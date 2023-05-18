@@ -33,7 +33,7 @@ public class UsuarioService implements IUsuarioService{
     }
 
     @Override
-    public Usuario cerrarSesion() {
+    public Usuario cerrarSesion(Usuario usuario) {
         return null;
     }
 }
