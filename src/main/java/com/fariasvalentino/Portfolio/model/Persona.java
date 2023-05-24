@@ -1,5 +1,6 @@
 package com.fariasvalentino.Portfolio.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import lombok.Getter;
@@ -11,12 +12,19 @@ public class Persona {
     
     @Id
     private Long id;
+    @Column (nullable = false, length = 50)
     private String nombre;
+    @Column (nullable = false, length = 50)
     private String apellido;
+    @Column (nullable = false, length = 70)
     private String ocupacion;
+    @Column (nullable = false, length = 50)
     private String email;
+    @Column (nullable = false, length = 15)
     private String telefono;
+    @Column (nullable = false, length = 50)
     private String localizacion;
+    @Column (nullable = false, length = 100)
     private String descripcion;
     private String urlImagen;
 
