@@ -27,6 +27,8 @@ public class PortfolioController {
     private ITecnologiaService tecnologia;
     @Autowired
     private IEducacionService educacion;
+    @Autowired
+    private IProyectoService proyecto;
     
     
     //Controller usuario
@@ -141,5 +143,31 @@ public class PortfolioController {
     @PutMapping ("/portfolio/educacion/editar/{id}")
     public Educacion editarEducacion(@PathVariable Long id, @RequestBody Educacion educacion){
         return this.educacion.editarEducacion(id, educacion);
+    }
+    
+    //Proyecto controller
+    @PostMapping ("portfolio/proyecto/agregar")
+    public void agregarProyecto(@RequestBody Proyecto proyecto){
+        this.proyecto.agregarProyeto(proyecto);
+    }
+    
+    @GetMapping ("portfolio/proyecto")
+    public List <Proyecto> mostrarProyectos(){
+       return this.proyecto.mostrarProyectos();
+    }
+    
+    @GetMapping ("portfolio/proyecto/{id}")
+    public Proyecto mostrarProyecto(@PathVariable Long id){
+       return this.proyecto.buscarProyecto(id);
+    }
+    
+    @PutMapping ("portfolio/proyecto/editar/{id}")
+    public Proyecto editarProyecto(@PathVariable Long id, @RequestBody Proyecto proyecto){
+        return this.proyecto.editarProyecto(id, proyecto);
+    }
+    
+    @DeleteMapping ("portfolio/proyecto/eliminar")
+    public void eliminarProyecto(@RequestParam Long id){
+        this.proyecto.borrarProyecto(id);
     }
 }
