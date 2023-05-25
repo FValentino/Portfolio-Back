@@ -29,6 +29,7 @@ public class EducacionService implements IEducacionService{
         Educacion edu = this.educacion.findById(id).orElse(null);
         
         edu.setNombre(educacion.getNombre());
+        edu.setCarrera(educacion.getCarrera());
         edu.setTitulo(educacion.getTitulo());
         edu.setFechaInicio(educacion.getFechaInicio());
         edu.setFechaFin(educacion.getFechaFin());

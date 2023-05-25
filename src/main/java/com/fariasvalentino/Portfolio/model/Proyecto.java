@@ -20,12 +20,14 @@ public class Proyecto {
     private String nombre;
     @Column (nullable = false, length = 50)
     private String descripcion;
+    private String urlProyecto;
     private String urlImagen;
 
-    public Proyecto(Long id, String nombre, String descripcion, String urlImagen) {
+    public Proyecto(Long id, String nombre, String descripcion, String urlProyecto, String urlImagen) {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
+        this.urlProyecto = urlProyecto;
         this.urlImagen = urlImagen;
     }
 

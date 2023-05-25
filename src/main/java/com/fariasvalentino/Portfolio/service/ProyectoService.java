@@ -35,6 +35,7 @@ public class ProyectoService implements IProyectoService{
         
         auxProyecto.setNombre(proyecto.getNombre());
         auxProyecto.setDescripcion(proyecto.getDescripcion());
+        auxProyecto.setUrlProyecto(proyecto.getUrlProyecto());
         auxProyecto.setUrlImagen(proyecto.getUrlImagen());
         
         return auxProyecto;
