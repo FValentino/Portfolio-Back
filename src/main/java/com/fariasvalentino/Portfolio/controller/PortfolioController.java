@@ -157,6 +157,7 @@ public class PortfolioController {
     }
     
     @GetMapping ("portfolio/proyecto/{id}")
+    @ResponseBody
     public Proyecto mostrarProyecto(@PathVariable Long id){
        return this.proyecto.buscarProyecto(id);
     }

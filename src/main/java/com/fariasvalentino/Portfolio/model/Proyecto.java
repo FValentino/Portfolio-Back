@@ -20,6 +20,7 @@ public class Proyecto {
     private String nombre;
     @Column (nullable = false, length = 50)
     private String descripcion;
+    @Column (nullable = false)
     private String urlProyecto;
     private String urlImagen;
 
